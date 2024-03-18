@@ -1,11 +1,11 @@
 ---
 author: ChaneyChan
-pubDatetime: 2024-03-19T15:22:00Z
+pubDatetime: 2024-03-17T15:22:00Z
 modDatetime: 2023-12-21T09:12:47.400Z
 title: kafka rebalance
 slug: kafka
 featured: true
-draft: true
+draft: false
 tags:
   - kafka
 description: Deep into kafka rebalance!
