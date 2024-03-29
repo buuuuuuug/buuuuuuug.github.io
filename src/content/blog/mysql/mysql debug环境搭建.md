@@ -1,7 +1,7 @@
 ---
 author: ChaneyChan
 pubDatetime: 2024-03-24T15:22:00Z
-modDatetime: 2024-12-21T09:12:47.400Z
+modDatetime: 2024-03-21T09:12:47.400Z
 title: Ubuntu CLion 搭建Mysql8.0调试环境
 slug: mysql
 featured: true
