@@ -33,9 +33,7 @@ debeizum是一个cdc（change data capture）框架，提供多种数据源的�
         这一点使他可以在不用新起服务的情况下实现CDC
 
 2.  支持多种数据源
-    不仅支持mysql，也支持mongo
-
-    ![alt text](../../../assets/images/debezium支持的数据源.png)
+    不仅支持mysql，也支持mongo、psql、sqlserver、oracle等等
 
 3.  支持存量数据快照
 
