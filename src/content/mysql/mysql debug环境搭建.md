@@ -179,7 +179,7 @@ server-id=99
 3. debug启动mysql
    现在，直接点击右上角n可执行文件 `mysqld`旁边的debug，就可以等待mysqln启动了
 
-   ![启动后的终端](../.././../assets/images/start_mysql.png)
+   ![启动后的终端](../../assets/images/start_mysql.png)
 
 4. 登录mysql
 
