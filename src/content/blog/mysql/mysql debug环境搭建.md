@@ -24,7 +24,7 @@ description: 在ubuntu下，使用CLion调试mysql8.0源代码
 
 可在 [这儿](https://dev.mysql.com/downloads/mysql/)下载对应版本的源代码，按照图中的筛选条件，选择第二个下载即可。
 
-![mysql下载页面](../../assets/images/down_mysql_source.png)
+![mysql下载页面](../../../assets/images/down_mysql_source.png)
 
 ## 安装必要的依赖和调试工具
 
@@ -127,11 +127,11 @@ server-id=99
 
 1. 配置toolchain
 
-   ![alt text](../../assets/images/config_toolchain.png)
+   ![alt text](../../../assets/images/config_toolchain.png)
 
 2. 配置cmake
 
-   ![alt text](../../assets/images/config_cmake.png)
+   ![alt text](../../../assets/images/config_cmake.png)
 
 上图中的cmake参数为
 
@@ -157,7 +157,7 @@ server-id=99
 
 在CLion右上角选择`mysqld`可执行文件，点击 编辑，在argements 一栏填入
 
-![alt text](../../assets/images/argments.png)
+![alt text](../../../assets/images/argments.png)
 
 ## 构建 & 启动
 
@@ -165,7 +165,7 @@ server-id=99
 
 1. install
 
-   ![install](../../assets/images/install.png)
+   ![install](../../../assets/images/install.png)
 
    此步骤相当于在源码根目录执行 `make install` 会需要比较长时间，CPU 和内存占用也会很高，我的笔记本就被迫重启了两次才编译完成。
 
@@ -179,7 +179,7 @@ server-id=99
 3. debug启动mysql
    现在，直接点击右上角n可执行文件 `mysqld`旁边的debug，就可以等待mysqln启动了
 
-   ![启动后的终端](../../assets/images/start_mysql.png)
+   ![启动后的终端](../../../assets/images/start_mysql.png)
 
 4. 登录mysql
 
@@ -197,7 +197,7 @@ update mysql.user set host='%' where user='root';
 
 ## 打个断点
 
-![alt text](../../assets/images/gdebu_mysql.png)
+![alt text](../../../assets/images/gdebu_mysql.png)
 
 然后在终端执行
 
