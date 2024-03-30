@@ -34,9 +34,9 @@ description: Deep into kafka rebalance!
 
 目前，Kafka 为消费者组定义了 5 种状态，它们分别是：Empty、Dead、PreparingRebalance、CompletingRebalance 和 Stable
 
-![消费者状态](../../../assets/images/consumer_state.png)
+![消费者状态](../../assets/images/consumer_state.png)
 各个状态之间的流转关系如下：
-![消费者状态](../../../assets/images/consumer_state_change.png)
+![消费者状态](../../assets/images/consumer_state_change.png)
 
 ## 消费者端的重平衡
 
@@ -53,9 +53,9 @@ description: Deep into kafka rebalance!
 
 在这一步中，领导者向协调者发送 SyncGroup 请求，将刚刚做出的分配方案发给协调者。值得注意的是，其他成员也会向协调者发送 SyncGroup 请求，只不过请求体中并没有实际的内容。这一步的主要目的是让协调者接收分配方案，然后统一以 SyncGroup 响应的方式分发给所有成员，这样组内所有成员就都知道自己该消费哪些分区了。
 
-![消费者状态](../../../assets/images/kafka-join-group.png)
+![消费者状态](../../assets/images/kafka-join-group.png)
 
-![消费者状态](../../../assets/images/kafka-sync-group.png)
+![消费者状态](../../assets/images/kafka-sync-group.png)
 
 SyncGroup 请求的主要目的，就是让协调者把领导者制定的分配方案下发给各个组内成员。当所有成员都成功接收到分配方案后，消费者组进入到 Stable 状态，即开始正常的消费工作
 
