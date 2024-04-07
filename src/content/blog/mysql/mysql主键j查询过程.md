@@ -1,13 +1,14 @@
 ---
 author: ChaneyChan
-pubDatetime: 2024-04-08T00:42:00.000Z
-modDatetime: 2024-04-08T00:42:00.000Z
+pubDatetime: 2024-04-08T00:42:00Z
+modDatetime: 2024-04-08T00:42:00Z
 title: 源码剖析mysql如何实现按照主键查询
+slug: mysql_select_exec
 featured: true
 draft: false
 tags:
   - mysql
-description:
+description: 深入源码学习mysql主键查询过程
 ---
 
 这篇文章将深入mysql源码，学习mysql如何执行下面的语句的
