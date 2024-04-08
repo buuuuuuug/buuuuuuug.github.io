@@ -129,12 +129,12 @@ drop procedure prepare_data;
 
 在继续往下看之前，我们需要知道page directory 结构是什么样的。
 
-![page_directory](https://relph1119.github.io/mysql-learning-notes/images/05-14.png)
+![alt text](../../../assets/images/page_directory.png)
 
 图中为一个page的简化结构，可以看到这个page被分成了多个group，每个组只有少数几条记录，每个组与旁边的一列“方块”有着联系。
 
 实际上，左侧的一列方块也是这一个page的一部分，在物理内存上位于比用户记录更高的地址空间,如下图所示：
-![page_struct](https://relph1119.github.io/mysql-learning-notes/images/05-02.png)
+![alt text](../../../assets/images/mysql-page-record.png)
 
 每一个slot存储的内容是什么呢，观察可以发现，每个slot中存放的数据似乎是指向对应group的最大记录的记录头信息之后，真实列数据之前的地址，我们一会儿可以在代码中验证这一点。
 
@@ -210,7 +210,7 @@ return 5000 > 24368;
 不出所料！接下来就不一遍一遍走这个循环了。
 
 Boom!跳出循环后：
-![up-mid<=1](../../../assets/images/up-mid<=1.png)
+![up-mid-close](../../../assets/images/up-mid-close.png)
 `low = 5`, `up = 6`
 
 显然，我们要找的记录5000存在于编号为6的group中，
