@@ -8,6 +8,7 @@ featured: true
 draft: false
 tags:
   - mysql
+  - B+Tree
 description: 深入源码学习mysql主键查询过程
 ---
 
@@ -26,7 +27,7 @@ select * from goods where id = 5000;
 
 ## mysql的架构图
 
-![mysql架构图](../../../assets/images/Mysql架构与执行流程.png)
+![mysql架构图](../../../assets/images/Mysql_arch_and_flow.png)
 
 上图极为简要的描述的mysql的架构以及sql语句的处理流程。
 
@@ -149,7 +150,7 @@ drop procedure prepare_data;
 第一遍循环，`up = 53, low = 0`,得到的 `mid slot` 为第26个slot，然后根据这个slot存储的`指针` 找到`mid_rec`，地址为 `0x7fffd51e0620`。
 
 根据我们之前的猜测，这个地址应该是一条记录，我们实际看一下内存中这个地址数据，如下：
-![slot指向的内存地址](../../../assets/images/slot_对应的内存数据.png)
+![slot指向的内存地址](../../../assets/images/slot_data.png)
 .再一次，结合前置知识，我们知道这个地址对应的是一条记录的 `数据开始位置`，往左是记录头信息，往右是`主键列的值`——通过这一点，我们能确定，当前内存中的 `80 00 5f 30` 就是这个页中，26 group 中id最大的一条的id.
 
 > 此处需要提醒一下，四个字节表示一个id太富余了，实际上前两个字节 `0x8000`，转为二进制 为 `1000 0000 0000 0000`，有点像i符号位的意思，咱就先这么理解
