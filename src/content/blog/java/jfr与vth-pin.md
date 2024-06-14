@@ -1,6 +1,6 @@
 ---
 author: ChaneyChan
-pubDatetime: 2024-06-14T15:22:00Z
+pubDatetime: 2024-06-11T15:22:00Z
 modDatetime: 2023-06-11T09:12:47.400Z
 title: JFR 介绍与基本使用
 slug: jfr-event
