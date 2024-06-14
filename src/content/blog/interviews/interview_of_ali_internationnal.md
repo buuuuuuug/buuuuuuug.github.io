@@ -5,7 +5,7 @@ modDatetime: 2024-04-10T20:42:00Z
 title: 面试阿里国际记录-第一轮技术面
 slug: interview
 featured: true
-draft: false
+draft: true
 tags:
   - interview
 description: 面试阿里国际-第一轮技术面试-电话面试
