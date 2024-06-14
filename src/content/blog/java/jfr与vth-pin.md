@@ -3,6 +3,7 @@ author: ChaneyChan
 pubDatetime: 2024-03-14T15:22:00Z
 modDatetime: 2023-12-21T09:12:47.400Z
 title: JFR 介绍与基本使用
+slug: jfr-event
 featured: true
 draft: false
 tags:
