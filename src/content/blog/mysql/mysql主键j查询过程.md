@@ -147,6 +147,7 @@ drop procedure prepare_data;
 
 将请求断点在`while`循环中，可以看到第一次循环时，各个主要变量 的值如下
 ![二分查找slot](../../../assets/images/mysql_bi_search_directory.png)
+
 第一遍循环，`up = 53, low = 0`,得到的 `mid slot` 为第26个slot，然后根据这个slot存储的`指针` 找到`mid_rec`，地址为 `0x7fffd51e0620`。
 
 根据我们之前的猜测，这个地址应该是一条记录，我们实际看一下内存中这个地址数据，如下：
@@ -191,8 +192,10 @@ for (ulint i = 4 + (len & 3); i > 0; i--) {
 
 `data1` 就是我们查询的id，5000 (0x1388 = 5000)
 ![data1](../../../assets/images/data1.png)
+
 `data2`就是当前e这条被用来比较的记录的id
 ![data2](../../../assets/images/data2.png)
+
 `0x5f30`前面已经算过了，24368，也就是 `mid`
 这点在我们的意料o之中，但是，这个比较为什么是 循环呢？不是简单的
 
@@ -212,6 +215,7 @@ return 5000 > 24368;
 
 Boom!跳出循环后：
 ![up-mid-close](../../../assets/images/up-mid-close.png)
+
 `low = 5`, `up = 6`
 
 显然，我们要找的记录5000存在于编号为6的group中，
